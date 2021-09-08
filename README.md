@@ -65,6 +65,7 @@ Stemming words to their root
 
 <img src="https://user-images.githubusercontent.com/66656063/131164051-9ef33b25-2168-4f0b-ada7-57bc6563b712.png" height="200" width="250">
 <img src="https://user-images.githubusercontent.com/66656063/131164434-62824df6-daf0-4cca-a279-a17eb646e89c.png" height="200" width="250">
+
 ## Analysis
 
 We first created our baseline model with a dummy classifier. Due to our large target class imbalance, we set the dummy to use the stratified strategy. We wanted to use a tfidf vectorizer, and a multinomial naive bayes classifier. We created a pipeline using those two models and added a smote for our target class imbalance. We ran a grid search on that pipeline to find our best parameters. The hyperparameter tuning was used to maximize the F1 scores of the model. Once the best parameters were identified, our team entered them into a pipeline. From there we were able to keep the parameters constant while focusing solely on an individual parameter and adjusting it radically up or down with use of a function, based on experience and intuition. This method saved time by affording us the ability to bypass conducting a new grid search with every experimentation we ran on the parameter tuning at the micro-level. Once it was determined that we had the best hyper-parameter, the process was repeated on all applicable parameter settings.
